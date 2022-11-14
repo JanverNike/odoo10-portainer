@@ -28,7 +28,7 @@ RUN set -x; \
 ENV ODOO_VERSION 10.0
 ENV ODOO_RELEASE 20200827
 RUN set -x; \
-        curl -o odoo.deb -SL https://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo 'db5d5f6fb4141aa62cd8ca6f82d30b27e4393dc5 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
