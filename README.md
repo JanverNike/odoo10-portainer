@@ -1,2 +1,2 @@
-# odoo11-portainer
-Odoo 11 Portainer Stack
+# odoo10-portainer
+Odoo 10 Portainer Stack
