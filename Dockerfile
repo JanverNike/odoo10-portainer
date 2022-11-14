@@ -24,11 +24,11 @@ RUN set -x; \
         && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/
 
 # Install Odoo
-ENV ODOO_VERSION 11.0
-ENV ODOO_RELEASE 20210922
+ENV ODOO_VERSION 10.0
+ENV ODOO_RELEASE 20200827
 RUN set -x; \
         curl -o odoo.deb -SL https://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && echo '6f647eba7005817422a729f426eaca3f64f8fcca odoo.deb' | sha1sum -c - \
+        && echo 'db5d5f6fb4141aa62cd8ca6f82d30b27e4393dc5 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
