@@ -39,6 +39,7 @@ RUN set -x; \
 #RUN pip3 install num2words
 COPY ./entrypoint.sh /
 RUN chmod a+rx /entrypoint.sh
+COPY ./odoo.conf /
 COPY ./odoo.conf /etc/odoo/
 RUN chown odoo /etc/odoo/odoo.conf
 
