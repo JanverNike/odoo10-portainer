@@ -32,5 +32,6 @@ services:
 #    driver: bridge
 #    attachable: false
 volumes:
+  odoo10_db:
   odoo10_data:
   odoo10_addons:
