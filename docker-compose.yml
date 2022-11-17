@@ -8,7 +8,7 @@ services:
       - "POSTGRES_USER=odoo"
       - "PGDATA=/var/lib/postgresql/data/pgdata"
     volumes:
-      - /srv/odoo10/db:/var/lib/postgresql/data/pgdata
+      - odoo10_db:/var/lib/postgresql/data/pgdata
 #    network:
 #      - odoo10_network
   odoo10:
